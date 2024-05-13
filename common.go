@@ -2,7 +2,6 @@ package ibus
 
 import (
 	"fmt"
-	"io/ioutil"
 	"os"
 	"strconv"
 	"strings"
@@ -61,7 +60,7 @@ func GetAddress() string {
 	if address != "" {
 		return address
 	}
-	data, err := ioutil.ReadFile(GetSocketPath())
+	data, err := os.ReadFile(GetSocketPath())
 	if err != nil {
 		panic(err)
 	}
@@ -112,9 +111,9 @@ func GetSocketPath() string {
 func GetLocalMachineId() string {
 	var mID []byte
 	var err error
-	mID, err = ioutil.ReadFile("/var/lib/dbus/machine-id")
+	mID, err = os.ReadFile("/var/lib/dbus/machine-id")
 	if err != nil {
-		mID, err = ioutil.ReadFile("/etc/machine-id")
+		mID, err = os.ReadFile("/etc/machine-id")
 		if err != nil {
 			panic(err)
 		}
