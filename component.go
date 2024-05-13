@@ -3,7 +3,7 @@ package ibus
 import (
 	"encoding/xml"
 	"fmt"
-	"github.com/godbus/dbus"
+	"github.com/godbus/dbus/v5"
 	"io"
 )
 
