@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"github.com/godbus/dbus"
-	"github.com/sarim/goibus/ibus"
+	"github.com/BambooEngine/goibus"
 )
 
 type GittuEngine struct {

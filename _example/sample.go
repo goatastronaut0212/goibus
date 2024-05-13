@@ -3,8 +3,8 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/godbus/dbus"
-	"github.com/sarim/goibus/ibus"
+	"github.com/godbus/dbus/v5"
+	"github.com/BambooEngine/goibus"
 	"os"
 )
 
